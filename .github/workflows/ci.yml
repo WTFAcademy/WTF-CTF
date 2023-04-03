@@ -16,4 +16,4 @@ jobs:
       - name: dependencies
         run: forge install
       - name: tests
-        run: forge test
+        run: forge test -C ./src

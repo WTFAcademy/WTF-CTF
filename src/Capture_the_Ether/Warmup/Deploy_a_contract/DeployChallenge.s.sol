@@ -1,9 +1,9 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.19;
 
 import "forge-std/Script.sol";
-import "../src/DeployChallenge.sol";
+import "./DeployChallenge.sol";
 
 contract DeployChallengeScript is Script {
     function setUp() public {}
