@@ -29,7 +29,23 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
   - **Deploy a contract**: [代码](./src/Capture_the_Ether/Warmup/Deploy_a_contract/DeployChallenge.s.sol) | [文章](./src/Capture_the_Ether/Warmup/Deploy_a_contract/README.md)
   - **Call me**: [代码](./src/Capture_the_Ether/Warmup/Call_me/CallMeChallenge.t.sol) | [文章](./src/Capture_the_Ether/Warmup/Call_me/README.md)
 
-## WTF贡献者
+## 参考
+
+* [Capture the Ether](https://capturetheether.com/)
+* [Ethernaut](https://ethernaut.openzeppelin.com/)
+* [Damn Vulnerable DeFi](https://www.damnvulnerabledefi.xyz/)
+* [Paradigm CTF](https://ctf.paradigm.xyz/)
+* [Mr Steal Yo Crypto](https://mrstealyocrypto.xyz/)
+* [QuillCTF](https://quillctf.super.site/)
+* Lists
+  * [Blocksec CTFs](https://github.com/blockthreat/blocksec-ctfs)
+  * [Awesome Ethereum Security](https://github.com/crytic/awesome-ethereum-security)
+  * [CTF Blockchain Challenges](https://github.com/minaminao/ctf-blockchain)
+  * [CTFGym](https://github.com/PumpkingWok/CTFGym)
+
+
+
+## WTF 贡献者
 <div align="center">
   <h4 align="center">
     贡献者是WTF学院的基石
