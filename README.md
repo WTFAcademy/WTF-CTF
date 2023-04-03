@@ -1,7 +1,7 @@
 # WTF-CTF [![tests](https://github.com/WTFAcademy/WTF-CTF/actions/workflows/ci.yml/badge.svg?label=tests)](https://github.com/WTFAcademy/WTF-CTF/actions/workflows/ci.yml) ![license](https://img.shields.io/github/license/WTFAcademy/WTF-CTF?label=license) ![solidity](https://img.shields.io/badge/solidity-^0.8.19-green) [![Foundry - ^0.8.0](https://img.shields.io/static/v1?label=Foundry&message=^0.8.0&color=black&logo=ethereum&logoColor=white)](https://book.getfoundry.sh/)
 
 
-CTF（Capture The Flag，夺旗赛）是一种网络安全竞赛，源于黑客和网络安全社区。CTF比赛通常由一系列安全挑战组成，参赛者需要发挥他们的技术、创造力和解决问题的能力，以找出并利用各种网络安全漏洞来完成任务。比赛的目的是让参赛者在模拟的真实场景中学习和练习网络安全技能。
+Collect CTFs related to evm, and provide solutions, using [Foundry](https://book.getfoundry.sh/). 收集 EVM 类的 CTF 挑战，并提供解决方案。
 
 Lead by [flyq](https://github.com/flyq)
 
