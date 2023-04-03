@@ -1,0 +1,19 @@
+name: ci
+
+on: [push]
+
+jobs:
+  tests:
+    name: Forge Testing
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+      - name: dependencies
+        run: forge install
+      - name: tests
+        run: forge test -C ./src
