@@ -66,4 +66,37 @@ forge test -C src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
 
 ## 功能简述
 
-使用 forge script 在测试网部署了合约。
+1. 使用 forge script 在测试网部署了合约。
+   我们使用 xxx.s.sol 来告诉 forge 这是一个 forge script 文件，并且里面存在 `setUp()` 来初始化 script 和 `run()` 执行具体的功能。
+
+    ```sol
+        // 获取 environment variable 里面 PRIVATE_KEY 的值
+        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        // 使用 deployerPrivateKey 签署后续交易
+        vm.startBroadcast(deployerPrivateKey);
+
+        // 创建 DeployChallenge，如果 script 的 transactions 被发送到链上，则会在链上新建合约。
+        new DeployChallenge();
+
+        // 停止使用 deployerPrivateKey。即后续的操作不在使用 deployerPrivateKey 签名。
+        vm.stopBroadcast();
+    ```
+
+2. 使用 forge test 在本地模拟测试。
+   我们使用 xxx.t.sol 来告诉 forge 这是一个 forge test 文件，并且里面存在 `setUp()` 来初始化 test 和 `testXXX()` 执行对某个具体功能的测试。
+    ```sol
+    contract DeployChallengeTest is Test {
+        DeployChallenge public deployChallenge;
+
+        // 在 setUp 里面部署 deployChallenge
+        function setUp() public {
+            deployChallenge = new DeployChallenge();
+        }
+
+        // 检查 deployChallenge 的方法 isComplete 是否为 true
+        function testIsComplete() public {
+            assertTrue(deployChallenge.isComplete());
+        }
+
+    }
+    ```

@@ -1,0 +1,2 @@
+[workspace]
+members = ["src/Capture_the_Ether/Lotteries/Guess_the_secret_number/get_hash"]

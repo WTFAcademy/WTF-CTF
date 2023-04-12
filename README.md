@@ -28,6 +28,10 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
 - Warmup
   - **Deploy a contract**: [代码](./src/Capture_the_Ether/Warmup/Deploy_a_contract/DeployChallenge.s.sol) | [文章](./src/Capture_the_Ether/Warmup/Deploy_a_contract/README.md)
   - **Call me**: [代码](./src/Capture_the_Ether/Warmup/Call_me/CallMeChallenge.t.sol) | [文章](./src/Capture_the_Ether/Warmup/Call_me/README.md)
+  - **Chosse a nickname**: [代码](./src/Capture_the_Ether/Warmup/Choose_a_nickname/NicknameChallenge.t.sol) | [文章](./src/Capture_the_Ether/Warmup/Choose_a_nickname/README.md)
+- Lotteries
+  - **Guess the number**: [代码](./src/Capture_the_Ether/Lotteries/Guess_the_number/GuessTheNumberChallenge.t.sol) | [文章](./src/Capture_the_Ether/Lotteries/Guess_the_number/README.md)
+  - **Guess the secret number**: [代码](./src/Capture_the_Ether/Lotteries/Guess_the_secret_number/GuessTheSecretNumberChallenge.t.sol) | [文章](./src/Capture_the_Ether/Lotteries/Guess_the_secret_number/README.md)
 
 ## 参考
 
