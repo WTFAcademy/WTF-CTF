@@ -3,6 +3,8 @@
 
 Collect CTFs related to evm, and provide solutions, using [Foundry](https://book.getfoundry.sh/). 收集 EVM 类的 CTF 挑战，并提供解决方案。
 
+Lead by [flyq](https://github.com/flyq)
+
 ## 使用说明
 
 如果需要运行所有的测试：
