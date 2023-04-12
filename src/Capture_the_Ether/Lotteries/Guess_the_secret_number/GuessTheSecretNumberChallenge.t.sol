@@ -17,14 +17,14 @@ contract GuessTheSecretNumberChallengeTest is Test {
 
     function testGuessTheSecretNumber() public {
         emit log_named_uint("my balance", hacker.balance);
-        emit log_named_uint("guessTheNumberChallenge's balance", address(guessTheNumberChallenge).balance);
+        emit log_named_uint("guessTheSecretNumberChallenge's balance", address(guessTheSecretNumberChallenge).balance);
 
         vm.startPrank(hacker);
         guessTheSecretNumberChallenge.guess{value: 1 ether}(170);
         vm.stopPrank();
 
         emit log_named_uint("my new value", hacker.balance);
-        emit log_named_uint("guessTheNumberChallenge's new balance", address(guessTheNumberChallenge).balance);
+        emit log_named_uint("guessTheSecretNumberChallenge's new balance", address(guessTheSecretNumberChallenge).balance);
 
         assertTrue(guessTheSecretNumberChallenge.isComplete());
     }
