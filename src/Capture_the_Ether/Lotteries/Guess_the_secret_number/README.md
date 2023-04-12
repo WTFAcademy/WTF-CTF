@@ -32,12 +32,12 @@ keccak256(170): "db81b4d58595fbbbb592d3661a34cdca14d7ab379441400cbfa1b78bc447c36
 ```sh
 $ cd WTF-CTF
 
-$ forge test -C src/Capture_the_Ether/Lotteries/Guess_the_number -vvv
+$ forge test -C src/Capture_the_Ether/Lotteries/Guess_the_secret_number -vvv
 ```
 
 ## 功能简述
 
-因为 guess 的参数是 uint8 类型，因此解空间大小为 256，我们可以暴力破解：
+因为 guess 的参数是 uint8 类型，因此解空间大小为 256，我们可以在链下暴力破解：
 ```rs
 fn main() {
     for i in 0..=255 {
