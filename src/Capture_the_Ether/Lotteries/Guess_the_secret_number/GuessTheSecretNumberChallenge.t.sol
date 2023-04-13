@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.19;
 
@@ -24,7 +24,9 @@ contract GuessTheSecretNumberChallengeTest is Test {
         vm.stopPrank();
 
         emit log_named_uint("my new value", hacker.balance);
-        emit log_named_uint("guessTheSecretNumberChallenge's new balance", address(guessTheSecretNumberChallenge).balance);
+        emit log_named_uint(
+            "guessTheSecretNumberChallenge's new balance", address(guessTheSecretNumberChallenge).balance
+        );
 
         assertTrue(guessTheSecretNumberChallenge.isComplete());
     }

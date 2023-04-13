@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.19;
 
@@ -25,6 +25,7 @@ contract PredictTheFutureChallengeTest is Test {
         attacker.lockInGuess{value: 1 ether}(6);
 
         /*
+        // TODO
         uint blockNum = block.number;
         uint i = 1;
 
@@ -41,8 +42,7 @@ contract PredictTheFutureChallengeTest is Test {
 
         emit log_named_uint("my new value", hacker.balance);
         emit log_named_uint("predictTheFutureChallenge's new balance", address(predictTheFutureChallenge).balance);
-        
+
         // assertTrue(predictTheFutureChallenge.isComplete());
     }
-
 }

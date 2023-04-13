@@ -15,5 +15,4 @@ contract DeployChallengeTest is Test {
     function testIsComplete() public {
         assertTrue(deployChallenge.isComplete());
     }
-
 }

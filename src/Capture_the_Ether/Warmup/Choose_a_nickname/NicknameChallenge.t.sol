@@ -19,7 +19,9 @@ contract NicknameChallengeTest is Test {
     }
 
     function testNickname() public {
-        emit log_named_string("before change the name, the isComplete's value", nicknameChallenge.isComplete() ? "true" : "false");
+        emit log_named_string(
+            "before change the name, the isComplete's value", nicknameChallenge.isComplete() ? "true" : "false"
+        );
         assertFalse(nicknameChallenge.isComplete());
 
         vm.startPrank(hacker);
@@ -27,7 +29,9 @@ contract NicknameChallengeTest is Test {
         captureTheEther.setNickname(bytes32(UINT256_MAX));
         vm.stopPrank();
 
-        emit log_named_string("after change the name, the isComplete's value", nicknameChallenge.isComplete() ? "true" : "false");
+        emit log_named_string(
+            "after change the name, the isComplete's value", nicknameChallenge.isComplete() ? "true" : "false"
+        );
         assertTrue(nicknameChallenge.isComplete());
     }
 }

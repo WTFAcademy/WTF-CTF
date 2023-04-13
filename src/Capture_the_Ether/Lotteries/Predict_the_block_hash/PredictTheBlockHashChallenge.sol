@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.19;
 
-contract PredictTheFutureChallenge {
+contract PredictTheBlockHashChallenge {
     address guesser;
-    uint8 guess;
+    bytes32 guess;
     uint256 settlementBlockNumber;
 
     constructor() payable {
@@ -15,12 +15,12 @@ contract PredictTheFutureChallenge {
         return address(this).balance == 0;
     }
 
-    function lockInGuess(uint8 n) public payable {
+    function lockInGuess(bytes32 hash) public payable {
         require(guesser == address(0));
         require(msg.value == 1 ether);
 
         guesser = msg.sender;
-        guess = n;
+        guess = hash;
         settlementBlockNumber = block.number + 1;
     }
 
@@ -28,7 +28,7 @@ contract PredictTheFutureChallenge {
         require(msg.sender == guesser);
         require(block.number > settlementBlockNumber);
 
-        uint8 answer = uint8(uint256(keccak256(abi.encodePacked(blockhash(block.number - 1), block.timestamp)))) % 10;
+        bytes32 answer = blockhash(settlementBlockNumber);
 
         guesser = address(0);
         if (guess == answer) {
