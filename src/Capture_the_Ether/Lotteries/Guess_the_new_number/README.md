@@ -26,7 +26,7 @@ $ forge test -C src/Capture_the_Ether/Lotteries/Guess_the_new_number -vvv
 
 这个是 Attacker 合约中 attack 的逻辑，我们先检查 msg.sender，防止被 MEV 黑吃黑了，然后我们调用 attack 时需要携带 1 ether，然后我们构造出 answer，并按照要求调用 GuessTheNewNumberChallenge 合约的 guess，然后通过 challenge.isComplete() 检查是否挑战成功，这样即使挑战失败，也不会损失 ether，最后将得到的余额返回给自己。
 
-```sol
+```solidity
     function attack(address _challenge) public payable {
         if (msg.sender != owner) revert NotOwner();
         if (msg.value != 1 ether) revert ValueErr();

@@ -24,7 +24,7 @@ $ forge test -C src/Capture_the_Ether/Lotteries/Guess_the_random_number -vvv
 
 在 GuessTheRandomNumberChallenge 合约中，设置了一个 secret 变量 answer，并在部署时使用 blockhash，block.timestamp
 等初始化：
-```sol
+```solidity
 contract GuessTheRandomNumberChallenge {
     uint8 answer;
 
@@ -40,7 +40,7 @@ contract GuessTheRandomNumberChallenge {
 **思路 1**
 
 既然部署时的 block.number, block.timestamp 是可以拿到的，我们可以记录这些值，然后计算出 answer，这就是 testGuessTheRandomNumber1 的解决思路：
-```sol
+```solidity
         // Suppose several blocks have passed
         vm.roll(deployBlockNumber+10);
 
@@ -65,7 +65,7 @@ forge inspect ./src/Capture_the_Ether/Lotteries/Guess_the_random_number/GuessThe
 
 可以看出 slot 0 就存储了 answer。在本地测试中，我们使用 foundry 的 cheatcode: `vm.load()` 来代替 `eth_getStorageAt`，这是 testGuessTheRandomNumber2 的思路：
 
-```sol
+```solidity
         // 获取 slot 0 里面的值，这里就是 answer。
         uint answer = uint(vm.load(address(guessTheRandomNumberChallenge), bytes32(uint(0))));
 
