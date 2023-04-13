@@ -28,7 +28,7 @@ $ forge test -C src/Capture_the_Ether/Lotteries/Predict_the_future -vvv
 
 Attacker 合约中，lockInGuess，我们先调用 PredictTheFutureChallenge 的 lockInGuess，设置一个空间内的数，比如 6。然后过了两个块后，我们可以调用 Attacker 的 attack，如果挑战失败，revert 整个 transaction。然后再次尝试，直到成功后将所有的余额发送到 balance。
 
-```sol
+```solidity
     function lockInGuess(uint8 n) external payable {
         if (msg.sender != owner) revert NotOwner();
         if (address(this).balance < 1 ether) revert ValueErr();

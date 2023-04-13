@@ -55,7 +55,7 @@ fn main() {
 
 
 在测试合约中的 setUp，我们先给 hacker 转入 1 ether 用于后续调用 guess，然后创建 GuessTheSecretNumberChallenge
-```sol
+```solidity
     function setUp() public {
         payable(hacker).transfer(1 ether);
 
@@ -64,7 +64,7 @@ fn main() {
 ```
 
 在测试合约的 testGuessTheSecretNumber 中，我们调用 guess，设置参数为 170，并携带 1 ether 就能成功完成挑战
-```sol
+```solidity
         vm.startPrank(hacker);
         guessTheSecretNumberChallenge.guess{value: 1 ether}(170);
         vm.stopPrank();

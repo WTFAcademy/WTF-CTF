@@ -19,7 +19,7 @@ $ forge test -C src/Capture_the_Ether/Warmup/Choose_a_nickname -vvv
 ## 功能简述
 
 根据 NicknameChallenge contract 里面使用 msg.sender 来创建 CaptureTheEther contract 的对象，推测 CaptureTheEther contract 有部署 NicknameChallenge contract 的逻辑，但是题目里面把这块省略了：
-```sol
+```solidity
 contract NicknameChallenge {
     CaptureTheEther cte = CaptureTheEther(msg.sender);
     ...
@@ -27,7 +27,7 @@ contract NicknameChallenge {
 ```
 
 在 NicknameChallenge.t.sol 中，通过 setUp() 进行初始化设置，我们先创建 CaptureTheEther 合约，然后使用作弊码 startPrank 为所有后续调用设置 msg.sender 为 captureTheEther 地址，直到调用 stopPrank：
-```sol
+```solidity
     function setUp() public {
         captureTheEther = new CaptureTheEther();
 
@@ -38,7 +38,7 @@ contract NicknameChallenge {
 ```
 
 然后，我们在测试函数 testNickname() 里面使用作弊码 startPrank 为所有后续调用设置 msg.sender 为 hacker 地址，并调用 setNickname：
-```sol
+```solidity
         vm.startPrank(hacker);
         // set my name to UINT256_MAX
         captureTheEther.setNickname(bytes32(UINT256_MAX));
