@@ -37,7 +37,9 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
   - **Guess the random number**: [代码](./src/Capture_the_Ether/Lotteries/Guess_the_random_number/GuessTheRandomNumberChallenge.t.sol) | [文章](./src/Capture_the_Ether/Lotteries/Guess_the_random_number/README.md)
   - **Guess the new number**: [代码](./src/Capture_the_Ether/Lotteries/Guess_the_new_number/Attacker.sol) | [文章](./src/Capture_the_Ether/Lotteries/Guess_the_new_number/README.md)
   - **Predict the future**: [代码](./src/Capture_the_Ether/Lotteries/Predict_the_future/Attacker.sol) ｜ [文章](./src/Capture_the_Ether/Lotteries/Predict_the_future/README.md)
-  - **Predict the block hash**: [代码]() | [文章]()
+  - **Predict the block hash**: [代码](./src/Capture_the_Ether/Lotteries/Predict_the_block_hash/PredictTheBlockHashChallenge.t.sol) | [文章](./src/Capture_the_Ether/Lotteries/Predict_the_block_hash/README.md)
+- Math
+  - **Token sale**: [代码](./src/Capture_the_Ether/Math/Token_sale/TokenSaleChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Token_sale/README.md)
 
 ## 参考
 
