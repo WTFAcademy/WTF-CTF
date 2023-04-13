@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.19;
 
@@ -25,9 +25,9 @@ contract GuessTheRandomNumberChallengeTest is Test {
         emit log_named_uint("guessTheRandomNumberChallenge's balance", address(guessTheRandomNumberChallenge).balance);
 
         // Suppose several blocks have passed
-        vm.roll(deployBlockNumber+10);
+        vm.roll(deployBlockNumber + 10);
 
-        uint8 answer = uint8(uint(keccak256(abi.encodePacked(blockhash(deployBlockNumber - 1), deployTime))));
+        uint8 answer = uint8(uint256(keccak256(abi.encodePacked(blockhash(deployBlockNumber - 1), deployTime))));
         emit log_named_uint("answer", answer);
 
         vm.startPrank(hacker);
@@ -35,7 +35,9 @@ contract GuessTheRandomNumberChallengeTest is Test {
         vm.stopPrank();
 
         emit log_named_uint("my new value", hacker.balance);
-        emit log_named_uint("guessTheRandomNumberChallenge's new balance", address(guessTheRandomNumberChallenge).balance);
+        emit log_named_uint(
+            "guessTheRandomNumberChallenge's new balance", address(guessTheRandomNumberChallenge).balance
+        );
 
         assertTrue(guessTheRandomNumberChallenge.isComplete());
     }
@@ -44,7 +46,7 @@ contract GuessTheRandomNumberChallengeTest is Test {
         emit log_named_uint("my balance", hacker.balance);
         emit log_named_uint("guessTheRandomNumberChallenge's balance", address(guessTheRandomNumberChallenge).balance);
 
-        uint answer = uint(vm.load(address(guessTheRandomNumberChallenge), bytes32(uint(0))));
+        uint256 answer = uint256(vm.load(address(guessTheRandomNumberChallenge), bytes32(uint256(0))));
 
         emit log_named_uint("answer", answer);
 
@@ -53,7 +55,9 @@ contract GuessTheRandomNumberChallengeTest is Test {
         vm.stopPrank();
 
         emit log_named_uint("my new value", hacker.balance);
-        emit log_named_uint("guessTheRandomNumberChallenge's new balance", address(guessTheRandomNumberChallenge).balance);
+        emit log_named_uint(
+            "guessTheRandomNumberChallenge's new balance", address(guessTheRandomNumberChallenge).balance
+        );
 
         assertTrue(guessTheRandomNumberChallenge.isComplete());
     }
