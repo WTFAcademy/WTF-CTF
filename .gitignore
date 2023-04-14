@@ -18,3 +18,5 @@ broadcast/
 
 # rust build file
 target
+
+Cargo.lock
