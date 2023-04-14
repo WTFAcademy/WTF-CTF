@@ -4,7 +4,7 @@
 
 [原题链接](https://capturetheether.com/challenges/lotteries/predict-the-future/)
 
-原题目要求 PredictTheFutureChallenge 合约里面的余额为 0。参与过程分成两步，第一步时锁定答案，第二步揭示答案。如果锁定的答案等于当前揭示答案是用 blockhash 以及 timestamp 通过 hash 生成的数，即可转移 2 ether 出去。
+原题目要求 PredictTheFutureChallenge 合约的 ether 余额为 0。参与过程分成两步，第一步时锁定答案，第二步揭示答案。如果锁定的答案等于当前揭示答案是用 blockhash 以及 timestamp 通过 hash 生成的数，即可转移 2 ether 出去。
 
 ## 运行
 

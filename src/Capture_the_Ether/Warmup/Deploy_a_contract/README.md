@@ -4,7 +4,7 @@
 
 [原题链接](https://capturetheether.com/challenges/warmup/deploy)
 
-题目要求在 Ropsten test network 部署 [DeployChallenge](./DeployChallenge.sol) 合约，我们根据实际情况，修改合约里面的 solidity 版本为 ^0.8.19，并使用 forge 将合约部署到 Goerli test network。
+题目要求在 Ropsten test network 部署 [DeployChallenge](./DeployChallenge.sol) 合约，我们根据实际情况，修改合约里面的 solidity 版本为 `^0.8.19`，并使用 forge 将合约部署到 Goerli test network。
 
 ## 运行
 

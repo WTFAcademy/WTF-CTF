@@ -1,10 +1,10 @@
-# Predict the block_hash
+# Token sale
 
 ## 题目描述
 
 [原题链接](https://capturetheether.com/challenges/math/token-sale/)
 
-原题目要求 TokenSaleChallengeTest 合约里面的余额小于 1 ether。参与过程分成两步，第一步使用 ether 购买 token，第二步卖出 token。
+原题目要求 TokenSaleChallenge 合约的 ether 余额小于 1 ether。参与过程分成两步，第一步使用 ether 购买 token，第二步卖出 token。
 
 ## 运行
 
