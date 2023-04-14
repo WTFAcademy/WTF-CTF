@@ -42,6 +42,8 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
   - **Token sale**: [代码](./src/Capture_the_Ether/Math/Token_sale/TokenSaleChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Token_sale/README.md)
   - **Token whale**: [代码](./src/Capture_the_Ether/Math/Token_whale/TokenWhaleChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Token_whale/README.md)
   - **Retirement fund**: [代码](./src/Capture_the_Ether/Math/Retirement_fund/RetirementFundChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Retirement_fund/README.md)
+  - **Mapping**: [代码](./src/Capture_the_Ether/Math/Mapping/MappingChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Mapping/README.md)
+  - **Donation**: [代码](./src/Capture_the_Ether/Math/Donation/DonationChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Donation/README.md)
 
 ## 参考
 
