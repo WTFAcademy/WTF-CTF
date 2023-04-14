@@ -32,7 +32,7 @@ TokenWhaleChallenge 有两个角色，一个是 owner，他部署了这个合约
 
 在 testRetirementFund1 测试函数中，尝试直接 RetirementFundChallenge 合约转账失败，因为原合约里面没有实现 fallback/receive 函数
 
-```sol
+```solidity
         vm.startPrank(hacker);
         vm.expectRevert();
         payable(address(retirementFundChallenge)).transfer(1 wei);
