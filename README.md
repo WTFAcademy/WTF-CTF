@@ -40,6 +40,8 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
   - **Predict the block hash**: [代码](./src/Capture_the_Ether/Lotteries/Predict_the_block_hash/PredictTheBlockHashChallenge.t.sol) | [文章](./src/Capture_the_Ether/Lotteries/Predict_the_block_hash/README.md)
 - Math
   - **Token sale**: [代码](./src/Capture_the_Ether/Math/Token_sale/TokenSaleChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Token_sale/README.md)
+  - **Token whale**: [代码](./src/Capture_the_Ether/Math/Token_whale/TokenWhaleChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Token_whale/README.md)
+  - **Retirement fund**: [代码](./src/Capture_the_Ether/Math/Retirement_fund/RetirementFundChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Retirement_fund/README.md)
 
 ## 参考
 

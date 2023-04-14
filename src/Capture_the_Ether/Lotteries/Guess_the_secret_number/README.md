@@ -4,7 +4,7 @@
 
 [原题链接](https://capturetheether.com/challenges/lotteries/guess-the-secret-number/)
 
-原题目要求 GuessTheSecretNumberChallenge 合约里面的余额为 0。而调用 guess 并输入答案，如果答案的 hash 等于 answerHash 即可转移 ether 出去。
+原题目要求 GuessTheSecretNumberChallenge 合约的 ether 余额为 0。而调用 guess 并输入答案，如果答案的 hash 等于 answerHash 即可转移 ether 出去。
 
 ## 运行
 

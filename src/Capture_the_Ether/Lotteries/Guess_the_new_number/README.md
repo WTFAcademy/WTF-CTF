@@ -4,7 +4,7 @@
 
 [原题链接](https://capturetheether.com/challenges/lotteries/guess-the-new-number/)
 
-原题目要求 GuessTheNewNumberChallenge 合约里面的余额为 0。而调用 guess 并输入答案，如果答案等于使用 blockhash 以及 timestamp 通过 hash 生成的数，即可转移 2 ether 出去。
+原题目要求 GuessTheNewNumberChallenge 合约的 ether 余额为 0。而调用 guess 并输入答案，如果答案等于使用 blockhash 以及 timestamp 通过 hash 生成的数，即可转移 2 ether 出去。
 
 ## 运行
 

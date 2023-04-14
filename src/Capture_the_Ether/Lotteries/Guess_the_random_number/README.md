@@ -4,7 +4,7 @@
 
 [原题链接](https://capturetheether.com/challenges/lotteries/guess-the-random-number/)
 
-原题目要求 GuessTheRandomNumberChallenge 合约里面的余额为 0。而调用 guess 并输入答案，如果答案等于 answer 即可转移 2 ether 出去。
+原题目要求 GuessTheRandomNumberChallenge 合约的 ether 余额为 0。而调用 guess 并输入答案，如果答案等于 answer 即可转移 2 ether 出去。
 
 ## 运行
 

@@ -4,7 +4,7 @@
 
 [原题链接](https://capturetheether.com/challenges/warmup/call-me)
 
-题目要求调用 [CallMeChallenge](./CallMeChallenge.sol.sol) 合约的 `callme` 方法来改变 `isComplete` 的值，我们根据实际情况，修改合约里面的 solidity 版本为 ^0.8.19，并使用 forge test 在本地模拟这个过程。
+题目要求调用 [CallMeChallenge](./CallMeChallenge.sol.sol) 合约的 `callme` 方法来改变 `isComplete` 的值，我们根据实际情况，修改合约里面的 solidity 版本为 `^0.8.19`，并使用 forge test 在本地模拟这个过程。
 
 
 ## 运行

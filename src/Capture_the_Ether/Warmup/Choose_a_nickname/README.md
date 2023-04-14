@@ -4,7 +4,7 @@
 
 [原题链接](https://capturetheether.com/challenges/warmup/nickname/)
 
-原题目要求调用 Ropsten test network 上 CaptureTheEther 合约 (`0x71c46Ed333C35e4E6c62D32dc7C8F00D125b4fee`) 的 setNickname 方法，以便用于 leaderboard 的展示。我们根据实际情况，修改合约里面的 solidity 版本为 ^0.8.19，并使用 forge test 在本地模拟这个过程。
+原题目要求调用 Ropsten test network 上 CaptureTheEther 合约 (`0x71c46Ed333C35e4E6c62D32dc7C8F00D125b4fee`) 的 setNickname 方法，以便用于 leaderboard 的展示。我们根据实际情况，修改合约里面的 solidity 版本为 `^0.8.19`，并使用 forge test 在本地模拟这个过程。
 
 ## 运行
 
