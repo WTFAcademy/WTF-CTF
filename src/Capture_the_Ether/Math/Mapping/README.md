@@ -120,7 +120,10 @@ slot keccak(1) + 4: map[4]
 
 因此我们需要找到 map[x]，它的存储 slot 为 slot 0。
 即：
-$$Keccak(1) + x \equiv 0 \ (mod \ 2^{256}) \\ x \equiv 2^{256} - Keccak(1) \ (mod \ 2^{256})$$
+
+$$Keccak(1) + x \equiv 0 \ (mod \ 2^{256})$$ 
+
+$$x \equiv 2^{256} - Keccak(1) \ (mod \ 2^{256})$$
 
 而 `UINT256_MAX + 1 = 2^256`，因此 `uint256 index = UINT256_MAX - uint256(keccak256(abi.encode(1))) + 1`
 
