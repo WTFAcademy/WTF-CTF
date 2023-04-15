@@ -10,9 +10,7 @@ contract Deployer is Test {
     ///@param path - The path of the contract. For example, the file name for "MappingChallenge.sol" is
     /// "src/Capture_the_Ether/Math/Mapping/MappingChallenge.sol"
     ///@return deployedAddress - The address that the contract was deployed to
-    function deployContract(string memory path, uint256 value) public payable returns (address) {
-        require(msg.value == value);
-
+    function deployContract(string memory path) public payable returns (address) {
         string memory bashCommand =
             string.concat('cast abi-encode "f(bytes)" $(solc ', string.concat(path, " --bin --optimize | tail -1)"));
 
@@ -25,6 +23,7 @@ contract Deployer is Test {
 
         ///@notice deploy the bytecode with the create instruction
         address deployedAddress;
+        uint256 value = msg.value;
         assembly {
             deployedAddress := create(value, add(bytecode, 0x20), mload(bytecode))
         }
