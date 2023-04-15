@@ -19,9 +19,7 @@ contract DonationChallengeTest is Test {
     function setUp() public {
         Deployer deployer = new Deployer();
         donationChallenge = IDonationChallenge(
-            deployer.deployContract{value: 1 ether}(
-                "src/Capture_the_Ether/Math/Donation/DonationChallenge.sol", 1 ether
-            )
+            deployer.deployContract{value: 1 ether}("src/Capture_the_Ether/Math/Donation/DonationChallenge.sol")
         );
     }
 

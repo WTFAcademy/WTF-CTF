@@ -15,7 +15,7 @@ contract MappingChallengeTest is Test {
     function setUp() public {
         Deployer deployer = new Deployer();
         mappingChallenge =
-            IMappingChallenge(deployer.deployContract("src/Capture_the_Ether/Math/Mapping/MappingChallenge.sol", 0));
+            IMappingChallenge(deployer.deployContract("src/Capture_the_Ether/Math/Mapping/MappingChallenge.sol"));
     }
 
     function testMapping() public {

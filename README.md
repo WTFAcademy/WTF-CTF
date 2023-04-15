@@ -5,6 +5,37 @@ Collect CTFs related to evm, and provide solutions, using [Foundry](https://book
 
 Lead by [flyq](https://github.com/flyq)
 
+## 安装依赖
+
+
+**安装 Rust**
+
+```sh
+$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+并根据提示继续操作。
+
+**安装 svm**
+
+[svm-rs](https://github.com/roynalnaruto/svm-rs) is Solidity Compiler Version Manager
+
+```sh
+$ cargo install svm-rs
+```
+
+**设置 solc 版本**
+```sh
+$ svm install 0.4.26
+
+$ svm use 0.4.26
+
+$ solc --version
+```
+
+**安装 Foundry**
+
+根据 [Foundry 官方文档](https://getfoundry.sh/)配置好运行环境。
+
 ## 使用说明
 
 如果需要运行所有的测试：
@@ -15,7 +46,7 @@ $ cd ./WTF-CTF
 
 $ forge install
 
-$ forge test -vvv 
+$ forge test --ffi -vvv 
 ```
 
 如果只运行某一个挑战的测试(示例)：

@@ -1,10 +1,10 @@
-# Donation
+# Fifty years
 
 ## 题目描述
 
-[原题链接](https://capturetheether.com/challenges/math/donation/)
+[原题链接](https://capturetheether.com/challenges/math/fifty-years/)
 
-原题目要求 DonationChallenge 合约的 ether 余额为 0。最开始的时候 owner 会充值 1 ether 到合约。
+原题目要求 FiftyYearsChallenge 合约的 ether 余额为 0。最开始的时候 构造函数里面会充值 1 ether 到合约。
 
 ## 运行
 
@@ -40,17 +40,20 @@ $ solc --version
 
 **运行测试**
 
-编译 `DonationChallenge.sol` 时会产生一些 warning，并导致 foundry-evm 产生一个 stderr，因为 [solc 无法忽略 warning](https://github.com/ethereum/solidity/issues/2675)。不过并不会影响测试的通过，忽略就好。
+编译 `FiftyYearsChallenge.sol` 时会产生一些 warning，并导致 foundry-evm 产生一个 stderr，因为 [solc 无法忽略 warning](https://github.com/ethereum/solidity/issues/2675)。不过并不会影响测试的通过，忽略就好。
 
 ```sh
 $ cd WTF-CTF
 
-$ forge test -C src/Capture_the_Ether/Math/Donation --ffi -vvv
+$ forge test -C src/Capture_the_Ether/Math/Fifty_years --ffi -vvv
 ```
 
 ## 功能简述
 
-在原题 `^0.4.21` 版本下，`Donation donation` 默认是创建一个未初始化的 storage 指针，那么它会作用于 storage slot 0（关于 storage slot，可以参考上一节 Mapping 的文章），并根据 struct 的 storage layout，`donation.timestamp` 会作用于 storage slot 0，`donation.etherAmount` 会作用于 storage slot 1。在 `0.6.0` 版本之后，是不允许写这样的危险代码。
+这个 Challenge 同样利用了未初始化的 storage 指针会修改 storage slot 0,1...，具体可以先完成 Mapping，Donation。
+
+这个合约锁定了一定量的 ether，直到 50 年后才能提取。在此期间 Player 可以调用 upsert 继续存，并会导致一系列的 storage 的修改。我们需要怎么 hack 才能实现马上提取 ether 的目标？
+
 
 forge-std/Test.sol 要求 solidity 版本大于等于 0.6.2: `pragma solidity >=0.6.2 <0.9.0`。也就是说，我们测试文件 `DonationChallenge.t.sol` 是无法 import `DonationChallenge.sol`。我们需要使用 0.4.26 版本的编译器单独编译并且部署 `DonationChallenge.sol`
 
@@ -95,7 +98,7 @@ contract Deployer is Test {
 }
 ```
 
-这个合约使用了 forge ffi 作弊码，它允许开发者执行任意 shell 命令并捕获输出。我们需要使用它来获取 `DonationChallenge.sol` 的 bytescode。合约里面的命令相当于在 terminal 执行 `cast abi-encode "f(bytes)" $(solc ./src/Capture_the_Ether/Math/Donation/DonationChallenge.sol --bin --optimize | tail -1)` 然后使用 assembly 部署合约，并返回新合约地址。
+这个合约使用了 forge ffi 作弊码，它允许开发者执行任意 shell 命令并捕获输出。我们需要使用它来获取 `FiftyYearsChallenge.sol` 的 bytescode。合约里面的命令相当于在 terminal 执行 `cast abi-encode "f(bytes)" $(solc ./src/Capture_the_Ether/Math/F/DonationChallenge.sol --bin --optimize | tail -1)` 然后使用 assembly 部署合约，并返回新合约地址。
 
 然后在 DonationChallenge.t.sol 合约中 setUp 函数中利用 Deployer 部署好 DonationChallenge。
 
