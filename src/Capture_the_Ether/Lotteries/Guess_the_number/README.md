@@ -18,7 +18,7 @@ $ forge test -C src/Capture_the_Ether/Lotteries/Guess_the_number -vvv
 
 ## 功能简述
 
-根据 GuessTheNumberChallenge contract 里面的 guess 方法，当我们调用 guess 时，需要往合约里面转入 1 ether，并输入一个 uint8 类型的参数，如果参数等于 answer，42，就能从合约里面转移 2 ether 到调用者。
+根据 GuessTheNumberChallenge contract 里面的 guess 函数，当我们调用 guess 时，需要往合约里面转入 1 ether，并输入一个 uint8 类型的参数，如果参数等于 answer，42，就能从合约里面转移 2 ether 到调用者。
 ```solidity
     function guess(uint8 n) public payable {
         require(msg.value == 1 ether);
