@@ -76,6 +76,9 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
   - **Mapping**: [代码](./src/Capture_the_Ether/Math/Mapping/MappingChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Mapping/README.md)
   - **Donation**: [代码](./src/Capture_the_Ether/Math/Donation/DonationChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Donation/README.md)
   - **Fifty years**: [代码](./src/Capture_the_Ether/Math/Fifty_years/FiftyYearsChallenge.t.sol) | [文章](./src/Capture_the_Ether/Math/Fifty_years/README.md)
+- Accounts
+  - **Fuzzy identity**: [代码](./src/Capture_the_Ether/Accounts/Fuzzy_identity/FuzzyIdentityChallenge.t.sol) ｜ [文章](./src/Capture_the_Ether/Accounts/Fuzzy_identity/README.md)
+  - **Public Key**: [代码](./src/Capture_the_Ether/Accounts/Public_Key/PublicKeyChallenge.t.sol) | [文章](./src/Capture_the_Ether/Accounts/Public_Key/README.md)
 
 ## 参考
 

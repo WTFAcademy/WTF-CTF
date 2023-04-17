@@ -67,7 +67,6 @@ contract FiftyYearsChallengeTest is Test {
         emit log_named_uint("slot keccak(0) + 4", uint256(vm.load(address(fiftyYearsChallenge), arrSlot4)));
         emit log_named_uint("slot keccak(0) + 5", uint256(vm.load(address(fiftyYearsChallenge), arrSlot5)));
 
-
         new Attacker{value: 2}(payable(address(fiftyYearsChallenge)));
 
         fiftyYearsChallenge.withdraw(2);

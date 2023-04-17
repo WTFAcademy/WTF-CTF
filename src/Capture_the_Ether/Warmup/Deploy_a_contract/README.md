@@ -93,7 +93,7 @@ forge test -C src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
             deployChallenge = new DeployChallenge();
         }
 
-        // 检查 deployChallenge 的方法 isComplete 是否为 true
+        // 检查 deployChallenge 的函数 isComplete 是否为 true
         function testIsComplete() public {
             assertTrue(deployChallenge.isComplete());
         }
