@@ -3,4 +3,5 @@ members = [
     "src/Capture_the_Ether/Lotteries/Guess_the_secret_number/get_hash",
     "src/Capture_the_Ether/Accounts/Fuzzy_identity/get_addr",
     "src/Capture_the_Ether/Accounts/Public_Key/pubkey",
+    "src/Capture_the_Ether/Accounts/Account_Takeover/priv_key",
 ]
