@@ -2,7 +2,12 @@
 src = './src'
 out = 'out'
 libs = ['lib']
-
+remappings = [
+    "@openzeppelin/=lib/openzeppelin-contracts-08/",
+    "openzeppelin-contracts-05/=lib/openzeppelin-contracts-05/contracts/",
+    "openzeppelin-contracts-06/=lib/openzeppelin-contracts-06/contracts/",
+    "openzeppelin-contracts-08/=lib/openzeppelin-contracts-08/contracts/"
+]
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config
 
 [rpc_endpoints]
