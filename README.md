@@ -44,6 +44,8 @@ $ git clone https://github.com/WTFAcademy/WTF-CTF.git
 
 $ cd ./WTF-CTF
 
+$ forge install openzeppelin-contracts-05=OpenZeppelin/openzeppelin-contracts@v2.5.0 openzeppelin-contracts-06=OpenZeppelin/openzeppelin-contracts@v3.4.0 openzeppelin-contracts-08=OpenZeppelin/openzeppelin-contracts@v4.8.3
+
 $ forge install
 
 $ forge test --ffi -vvv 
