@@ -30,7 +30,7 @@ $ cargo run --bin pubkey
 public key: e95ba0b752d75197a8bad8d2e6ed4b9eb60a1e8b08d257927d0df4f3ea6860992aac5e614a83f1ebe4019300373591268da38871df019f694f8e3190e493e711
 address: 0xd8da6bf26964af9d7eed9e03e53415d37aa96045
 ```
-Rust 源码在 [Public Key/pubkey](./pubkey/)
+Rust 源码在 [Public_Key/pubkey](./pubkey/)
 
 将 public key 添加到 PublicChallenge.t.sol（已添加好），直接运行测试：
 
