@@ -20,3 +20,5 @@ broadcast/
 target
 
 Cargo.lock
+
+.history
