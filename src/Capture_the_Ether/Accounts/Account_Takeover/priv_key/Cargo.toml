@@ -21,3 +21,4 @@ elliptic-curve = { version = "0.13", default-features = false }
 tiny-keccak = { version = "2.0", default-features = false }
 eyre = "0.6"
 hex = "0.4"
+crypto-bigint = "0.5.1"

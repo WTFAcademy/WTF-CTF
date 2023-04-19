@@ -14,10 +14,9 @@ contract AccountTakeoverChallengeTest is Test {
     function testAccountTakeover() public {
         emit log_named_string("before hack, isComplete", accountTakeoverChallenge.isComplete() ? "true" : "false");
 
-        uint256 privateKey = 1;
+        uint256 privateKey = uint256(0x32e890da68f49d9be6d3642b2a1163fd8233cf995e9766a459d4cb5545913faa);
         vm.startBroadcast(privateKey);
-        // Stops collecting onchain transactions
-
+        accountTakeoverChallenge.authenticate();
         vm.stopBroadcast();
 
         emit log_named_string("after hack, isComplete", accountTakeoverChallenge.isComplete() ? "true" : "false");
