@@ -2,7 +2,7 @@
 pragma solidity ^0.8.19;
 
 contract AccountTakeoverChallenge {
-    address owner = 0x6B477781b0e68031109f21887e6B5afEAaEB002b;
+    address owner = 0xE6984F0F9dC2930bbe0c824d6D67712A6A411062;
     bool public isComplete;
 
     function authenticate() public {
