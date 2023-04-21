@@ -1,5 +1,6 @@
 AccountTakeoverChallengeTest:testAccountTakeover() (gas: 20879)
 AlienCodexTest:testAlienCodex() (gas: 343955)
+AssumeOwnershipChallengeTest:testAssumeOwnership() (gas: 41529)
 CallmeChallengeTest:testCallMe() (gas: 36898)
 CoinFlipTest:testCoinFlip() (gas: 226936)
 DelegationTest:testDelegation() (gas: 139481)

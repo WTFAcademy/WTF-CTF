@@ -62,11 +62,13 @@ $ forge test -C src/Capture_the_Ether/Accounts/Account_Takeover -vvv
 接下来需要恢复出私钥，这对 ECDSA 有深入的了解。这里就不深入的解释相关原理，这里花了 [4 篇文章](https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/)把它讲解得足够清晰了。
 
 $$
+
 n = FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141 \\
 
 k = \frac{signhash_1 - signhash_2}{s_1 - s_2} \ mod \ n \\ 
 
 key = r_1^{-1} \times (s_1 \times k - signhash_1) \ mod \ n
+
 $$
 
 // TODO
