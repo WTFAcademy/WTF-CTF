@@ -81,6 +81,10 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
 - Accounts
   - **Fuzzy identity**: [代码](./src/Capture_the_Ether/Accounts/Fuzzy_identity/FuzzyIdentityChallenge.t.sol) ｜ [文章](./src/Capture_the_Ether/Accounts/Fuzzy_identity/README.md)
   - **Public Key**: [代码](./src/Capture_the_Ether/Accounts/Public_Key/PublicKeyChallenge.t.sol) | [文章](./src/Capture_the_Ether/Accounts/Public_Key/README.md)
+  - **Account Takeover** [代码](./src/Capture_the_Ether/Accounts/Account_Takeover/AccountTakeoverChallenge.t.sol) | [文章](./src/Capture_the_Ether/Accounts/Account_Takeover/README.md)
+- Miscellaneous
+  - **Assume ownership**: [代码](./src/Capture_the_Ether/Miscellaneous/Assume_ownership/AssumeOwnershipChallenge.t.sol) | [文章](./src/Capture_the_Ether/Miscellaneous/Assume_ownership/README.md)
+  - **Token bank**: [代码](./src/Capture_the_Ether/Miscellaneous/Token_bank/TokenBankChallenge.t.sol) | [文章](./src/Capture_the_Ether/Miscellaneous/Token_bank/README.md)
 
 ## Ethernaut
 
