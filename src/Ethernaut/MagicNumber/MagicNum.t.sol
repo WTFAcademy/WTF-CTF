@@ -8,18 +8,20 @@ import "./MagicNumFactory.sol";
 
 contract MagicNumTest is Test {
     MagicNumFactory factory;
+    address solverHuff;
 
     function setUp() public {
         factory = new MagicNumFactory();
+        solverHuff = HuffDeployer.config().deploy("Solver");
     }
 
     function testMagicNum() public {
         address magicNum = factory.createInstance{value: 0.001 ether}(address(this));
 
-        solver solver_ = new solver();
-        assertEq(Solver(address(solver_)).whatIsTheMeaningOfLife(), bytes32(uint256(0x2a)));
+        // solver solver_ = new solver();
+        // assertEq(Solver(address(solver_)).whatIsTheMeaningOfLife(), bytes32(uint256(0x2a)));
 
-        MagicNum(magicNum).setSolver(address(solver_));
+        MagicNum(magicNum).setSolver(address(solverHuff));
 
         assertTrue(factory.validateInstance(payable(magicNum), address(this)));
     }
