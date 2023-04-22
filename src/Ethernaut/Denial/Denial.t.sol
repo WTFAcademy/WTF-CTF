@@ -16,11 +16,10 @@ contract DenialTest is Test {
 
         Denial(instance).setWithdrawPartner(address(this));
 
-        factory.validateInstance(instance, address(this));
+        assertTrue(factory.validateInstance(instance, address(this)));
     }
 
     receive() external payable {
-        // assert(false);
-        revert();
+        while (true) {}
     }
 }

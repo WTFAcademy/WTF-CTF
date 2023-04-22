@@ -86,11 +86,11 @@ constructor() {
 #define macro MAIN() = takes(0) returns(0) {
     
     // store 42 in memory at offset 0
-    0x2a    // [1]
-    0x00    // [0,1]
+    0x2a    // [42]
+    0x00    // [0,42]
     mstore  // []
 
-    // return 1
+    // return 42
     // return 32 bytes of memory starting at offset 0
     0x20    // [32]
     0x00    // [0,32]
