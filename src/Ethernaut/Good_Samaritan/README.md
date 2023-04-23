@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x8d07AC34D8f73e2892496c15223297e5B22B3ABE)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x36E92B2751F260D6a4749d7CA58247E7f8198284)
 
 将wallet合约中的Coin代币余额清零。
 

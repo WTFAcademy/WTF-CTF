@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x762db91C67F7394606C8A636B5A55dbA411347c6)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x5B50F1F5fE2Bef0a0429fD27B8214d856066F45e)
 
 Gatekeeper Three，我是你的破壁人。
 

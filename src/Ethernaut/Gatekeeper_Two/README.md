@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x0C791D1923c738AC8c4ACFD0A60382eE5FF08a23)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x0C791D1923c738AC8c4ACFD0A60382eE5FF08a23)
 
 Gatekeeper Two，我是你的破壁人。
 

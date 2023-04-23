@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x2C2307bb8824a0AbBf2CC7D76d8e63374D2f8446)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x2C2307bb8824a0AbBf2CC7D76d8e63374D2f8446)
 
 获得合约的owner权限来完成这一关
 

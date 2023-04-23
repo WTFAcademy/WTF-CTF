@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0xFe18db6501719Ab506683656AAf2F80243F8D0c0)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x2132C7bc11De7A90B87375f282d36100a29f97a9)
 
 用10个字节码返回一个数字
 
@@ -21,10 +21,10 @@ $ forge test -C src/Ethernaut/MagicNumber -vvvvv
 题目要求我们写一个solver合约，solver合约会对MagicNum合约的whatIsTheMeaningOfLife()合约间调用返回42（0x2a）。但是要求solver合约最多只有10个操作码。
 
 ```solidity
-// 该合约有173个字节码
+// 该合约有119个字节码, when Enable optimization 200
 contract Solver{
-    function whatIsTheMeaningOfLife() public pure returns (bytes32){
-        return bytes1(int8(42));
+    function whatIsTheMeaningOfLife() public pure returns (bytes32) {
+        return bytes32(uint256(42));
     }
 }
 ```

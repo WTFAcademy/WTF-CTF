@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0xD0a78dB26AA59694f5Cb536B50ef2fa00155C488)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x2427aF06f748A6adb651aCaB0cA8FbC7EaF802e6)
 
 拒绝用户提取资金`withdraw()`（此时合约仍有资金，并且交易的 gas 为 1M 或更少）。
 
@@ -18,7 +18,7 @@ $ forge test -C src/Ethernaut/Denial -vvvvv
 
 ## 功能简述
 
-call 如果异常会转账失败，只会返回false，不会最终停止执行（调整使用合适的方法并转账） 没有gas限制
+call 如果异常会转账失败，只会返回false，不会最终停止执行， 没有gas限制
 
 ```solidity
 // The recipient can revert, the owner will still get their share
@@ -27,7 +27,7 @@ partner.call{value: amountToSend}("");
 
 call方法会将调用结果以true和false的形式返回，即调用过程中有错误发生，也不会影响后续的代码。
 
-所以只有让gas全部在通话时全部消耗掉，无法运行后继续代码。
+所以只有让gas在外部call时全部消耗掉，无法运行后续代码。
 
 ```solidity
 receive() external payable {

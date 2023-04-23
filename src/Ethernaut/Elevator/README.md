@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x6DcE47e94Fa22F8E2d8A7FDf538602B1F86aBFd2)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x6DcE47e94Fa22F8E2d8A7FDf538602B1F86aBFd2)
 
 电梯不会让你达到大楼顶部, 对吧?
 
@@ -18,9 +18,9 @@ $ forge test -C src/Ethernaut/Elevator -vvvvv
 
 ## 功能简述
 
-只要两次调用i`sLastFloor`方法返回的bool值不同即可。
+只要两次调用`isLastFloor`方法返回的bool值不同即可。
 
-而题目定义的isLastFloor接口并没有限制函数类型，所以每次调用我们可以通过isLastFloor方法改变攻击合约中的值，来保证两次调用的返回值不同。
+而题目定义的`isLastFloor`接口并没有限制函数类型，所以每次调用我们可以通过`isLastFloor`方法改变攻击合约中的值，来保证两次调用的返回值不同。
 
 ```solidity
 interface Building {

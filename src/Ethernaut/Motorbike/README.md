@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x9b261b23cE149422DE75907C6ac0C30cEc4e652A)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x3A78EE8462BD2e31133de2B8f1f9CBD973D6eDd6)
 
 `Motorbike`合约使用代理调用`Engine`合约的逻辑，我们使用`Engine`合约中的逻辑时，将函数调用发送到`Motorbike`合约中，`Motorbike`合约再代理调用`Engine`合约。目标是销毁`Engine`合约，使`Motorbike`合约失效（无法代理调用）。
 

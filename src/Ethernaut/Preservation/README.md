@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x7ae0655F0Ee1e7752D7C62493CEa1E69A810e2ed)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x7ae0655F0Ee1e7752D7C62493CEa1E69A810e2ed)
 
 获得Preservation合约的owner权限
 
@@ -18,9 +18,11 @@ $ forge test -C src/Ethernaut/Preservation -vvvvv
 
 ## 功能简述
 
-Preservation 合约使用 delegatecall 时只会使用 LibraryContract合约的代码逻辑LibraryContract合约寻找变量时会按照 LibraryContract合约变量所在的插槽寻找 Preservation合约对应插槽中的变量。
+Preservation 合约使用 delegatecall 时只会使用 LibraryContract合约的代码逻辑。
 
-首先调用 Preservation合约 的 setFirstTime函数，函数参数为：Attack合约的地址。此时，Preservation合约中的timeZone1Library变量就修改为了Attack合约的地址。
+LibraryContract合约寻找变量时会按照 LibraryContract合约变量所在的插槽寻找 Preservation合约对应插槽中的变量。
+
+首先调用 Preservation合约的 setFirstTime函数，函数参数为：Attack合约的地址。此时，Preservation合约中的timeZone1Library变量就修改为了Attack合约的地址。
 
 ```solidity
 Preservation(preservation).setFirstTime(uint256(uint160(attack)));
@@ -32,7 +34,7 @@ Preservation(preservation).setFirstTime(uint256(uint160(attack)));
 Preservation(preservation).setFirstTime(uint256(uint160(address(this))));
 ```
 
-所以，在使用代理调用delegatecall时，需要保证proxy合约和implementation合约的内存插槽不要有冲突，如果proxy合约中有变量，implementation合约中就不要使用proxy合约中变量占据的插槽位置。另一个解决办法是proxy合约存储变量时尽量指定插槽位置，不适用默认从0开始的插槽排布
+所以，在使用代理调用delegatecall时，需要保证proxy合约和implementation合约的内存插槽不要有冲突，如果proxy合约中有变量，implementation合约中就不要使用proxy合约中变量占据的插槽位置。另一个解决办法是proxy合约存储变量时尽量指定插槽位置，不使用默认从0开始的插槽排布
 
 ```solidity
 assembly {

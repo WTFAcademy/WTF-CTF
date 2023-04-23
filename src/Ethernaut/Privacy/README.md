@@ -1,8 +1,8 @@
-# Elevator
+# Privacy
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x6DcE47e94Fa22F8E2d8A7FDf538602B1F86aBFd2)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x6DcE47e94Fa22F8E2d8A7FDf538602B1F86aBFd2)
 
 这个合约的制作者非常小心的保护了敏感区域的 storage.
 
@@ -15,7 +15,7 @@
 ```sh
 $ cd WTF-CTF
 
-$ forge test -C src/Ethernaut/Elevator -vvvvv
+$ forge test -C src/Ethernaut/Privacy -vvvvv
 ```
 
 ## 功能简述
@@ -37,6 +37,6 @@ bytes32[3] private data;// 插槽2剩余29字节，不够data存放，data[0]占
 bytes16(vm.load(privacy, bytes32(uint256(5))))
 ```
 
-在EVM链上, 没有什么是私有的。 private 关键词只是 solidity 中人为规定的一个结构.。 我们其实可以读取 storage 中的任何信息, 虽然有些数据读取的时候会比较麻烦。 
+在EVM链上, 没有什么是私有的。 private 关键词只是 solidity 中人为规定的一个结构。 我们其实可以读取 storage 中的任何信息, 虽然有些数据读取的时候会比较麻烦。 
 
 想要知道如何读取合约中更多的信息, 可以参见 "Darius" 写的这篇详细的文章: [How to read Ethereum contract storage](https://medium.com/aigang-network/how-to-read-ethereum-contract-storage-44252c8af925)

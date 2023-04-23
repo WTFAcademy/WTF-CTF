@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x0b6F6CE4BCfB70525A31454292017F640C10c768)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0xf59112032D54862E199626F55cFad4F8a3b0Fce9)
 
 从`DexTwo`合约中耗尽 token1 和 token2 的所有余额才能成功通过此级别。
 

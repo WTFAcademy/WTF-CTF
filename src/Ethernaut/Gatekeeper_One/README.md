@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0xb5858B8EDE0030e46C0Ac1aaAedea8Fb71EF423C)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0xb5858B8EDE0030e46C0Ac1aaAedea8Fb71EF423C)
 
 我最喜欢的面壁计划。
 
@@ -30,7 +30,7 @@ $ forge test -C src/Ethernaut/Gatekeeper_One -vvvvv
 
 - 对于gateThree，EVM是栈虚拟机，采用大端模式。
 
-    - 对于gateThree part one，保证_gateKey后4位与_gateKey后8位转为数字后相同，即为0000abcd。
-    - 对于gateThree part two，保证_gateKey后8位与_gateKey全16位转为数字后不同，即前8位与后8为不同，即为efgh00000000abcd。
-    - 对于gateThree part three，保证账户（tx.origin）的后4位与_gateKey后8位转为数字后相同，若player账户后4位为：305c。即abcd = 305c（另外：efgh != abcd = 305c）
-    - 综上， _gateKey为 0xabcd00000000305c（若player账户后4位为：305c）
+    - 对于gateThree part one，保证gateKey后4位与gateKey后8位转为数字后相同，即为0000abcd。
+    - 对于gateThree part two，保证gateKey后8位与gateKey全16位转为数字后不同，即前8位与后8为不同，即为efgh00000000abcd。
+    - 对于gateThree part three，保证账户（tx.origin）的后4位与gateKey后8位转为数字后相同，若player账户后4位为：305c。即abcd = 305c（另外：efgh != abcd = 305c）
+    - 综上， gateKey为 0xabcd00000000305c（若player账户后4位为：305c）

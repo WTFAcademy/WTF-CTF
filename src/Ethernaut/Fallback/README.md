@@ -2,12 +2,12 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x3c34A342b2aF5e885FcaA3800dB5B205fEfa3ffB)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x3c34A342b2aF5e885FcaA3800dB5B205fEfa3ffB)
 
 通过这关你需要
 
 1. 获得这个合约的所有权
-2. 把他的余额减到0
+2. 把这个合约的的余额减到0
 
 ## 运行
 

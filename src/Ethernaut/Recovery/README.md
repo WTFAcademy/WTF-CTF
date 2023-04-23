@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0xb4B157C7c4b0921065Dded675dFe10759EecaA6D)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0xAF98ab8F2e2B24F42C661ed023237f5B7acAB048)
 
 合约创建者构建了一个非常简单的代币工厂合约。任何人都可以轻松创建新代币。在部署第一个代币合约后，创建者发送`0.001`以太币以获得更多代币。但是他们忘记了新代币的合约地址。我需要将他们新部署的代币合约中的`0.001`以太币取出。
 

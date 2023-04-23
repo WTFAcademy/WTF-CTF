@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x9b261b23cE149422DE75907C6ac0C30cEc4e652A)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x34bD06F195756635a10A7018568E033bC15F3FB5)
 
 找出错误`CryptoVault合约`错误，并防止它被耗尽token。
 

@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x73379d8B82Fda494ee59555f333DF7D44483fD58)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x73379d8B82Fda494ee59555f333DF7D44483fD58)
 
 这一关的目标是获得创建实例的所有权.
 
@@ -22,7 +22,7 @@ $ forge test -C src/Ethernaut/Delegation -vvvvv
 
 对于Delegatecall的使用方法可以阅读[WTF Solidity极简入门: 23. Delegatecall](https://github.com/AmazingAng/WTF-Solidity/tree/main/23_Delegatecall)
 
-另外，早期链上也有许多代理调用使用不当产生的攻击。[The Parity Wallet Hack Explained](https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/)
+另外，早期链上也有许多代理调用使用不当发生的攻击。[The Parity Wallet Hack Explained](https://blog.openzeppelin.com/on-the-parity-wallet-multisig-hack-405a8c12e8f7/)
 
 
 

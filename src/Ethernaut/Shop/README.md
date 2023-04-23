@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0xCb1c7A4Dee224bac0B47d0bE7bb334bac235F842)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x691eeA9286124c043B82997201E805646b76351a)
 
 以低于要求的价格从商店买到商品.
 
@@ -43,11 +43,26 @@ function price() external view returns (uint256) {
 }
 ```
 
+那如果将`Shop合约`的`buy函数`修改为这样，如何进行攻击？
 
+```solidity
+function buy() public {
+	Buyer _buyer = Buyer(msg.sender);
+
+	if (_buyer.price() >= price && !isSold) {
+		price = _buyer.price();
+		isSold = true;
+		}
+}
+```
 
 sload操作码会根据插槽的冷暖收取不同的gas值。
 
 > If the accessed address is warm, the dynamic cost is 100. Otherwise the dynamic cost is 2100. See section [access sets](https://www.evm.codes/about).
+
+如果在一次交易中读取了同一个storage变量，第二次读取时所消耗的gas费用会更低。
+
+所以，可以在view函数中读取一个storage变量，根据gas消耗的差值来判断是否是第一次调用。
 
 ```solidity
 function price() external view returns (uint256) {

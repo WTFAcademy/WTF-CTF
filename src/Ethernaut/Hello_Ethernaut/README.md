@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x7E0f53981657345B31C59aC44e9c21631Ce710c7)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x7E0f53981657345B31C59aC44e9c21631Ce710c7)
 
 本题目是Ethernaut的新手村教程，让玩家熟悉如何通过浏览器的控制台解决问题。
 
@@ -22,7 +22,7 @@ $ forge test -C src/Ethernaut/Hello_Ethernaut -vvvvv
 
 题目引导我们如何完成一道题目的完整解题过程。
 
-首选创建实例，在本仓库中就是通过工厂合约创建出一个题目。即调用`createInstance()`方法。
+首先创建实例，在本仓库中就是通过工厂合约创建出一个题目。即调用`createInstance()`方法。
 
 ```solidity
 // createInstance 创建题目实例
@@ -32,9 +32,9 @@ $ forge test -C src/Ethernaut/Hello_Ethernaut -vvvvv
 function createInstance(address _player) public payable override returns (address)
 ```
 
-然后题目让我们调用`info()`，然后根据合约的返回值进行调用其他方法。
+然后题目让我们调用`info()`，然后根据合约的返回值调用其他方法...
 
-最后提交实例，以判断是否完成解题，即调用`validateInstance()`方法。
+最后提交实例，以判断是否完成解题，即调用工厂合约的`validateInstance()`方法。
 
 ```solidity
 // validateInstance 验证题目是否完成

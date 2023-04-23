@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0x478f3476358Eb166Cb7adE4666d04fbdDB56C407)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0x478f3476358Eb166Cb7adE4666d04fbdDB56C407)
 
 这一关的目标是攻破这个基础 token 合约
 
@@ -22,4 +22,4 @@ $ forge test -C src/Ethernaut/Token -vvvvv
 
 uint变量一定是大于0的；而且在0.8.0之前版本的solidity是没有内置safemath的，所以 `0 - 1` 会变成 `0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff`那莫大。
 
-所以我们只需要给其他人转21个代币，然后我们账户的余额就会下
+所以我们只需要给其他人转21个代币，然后我们账户的余额就会下溢出。

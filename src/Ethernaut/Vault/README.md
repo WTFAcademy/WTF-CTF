@@ -2,7 +2,7 @@
 
 ## 题目描述
 
-[原题链接](https://ethernaut.openzeppelin.com/level/0xB7257D8Ba61BD1b3Fb7249DCd9330a023a5F3670)
+[原题 in Sepolia](https://ethernaut.openzeppelin.com/level/0xB7257D8Ba61BD1b3Fb7249DCd9330a023a5F3670)
 
 解锁 vault 来通过这一关!
 
@@ -18,11 +18,11 @@ $ forge test -C src/Ethernaut/Vault -vvvvv
 
 ## 功能简述
 
-要解锁Vault合约，需要我们输入一个password，这个password需要与和合约创建时传入password一致。可合约的password是一个私有变量，在合约abi（[WTF Solidity极简入门: 27. ABI编码解码](https://github.com/AmazingAng/WTF-Solidity/tree/main/27_ABIEncode)）中被没有方法进行读取。
+要解锁Vault合约，需要我们输入一个password，这个password需要与合约创建时传入password一致。可合约的password是一个私有变量，在合约abi（[WTF Solidity极简入门: 27. ABI编码解码](https://github.com/AmazingAng/WTF-Solidity/tree/main/27_ABIEncode)）中被没有方法进行读取。
 
 但一个变量设制成私有, 只能保证不让别的合约访问他. 但链上数据是公开的，我们可以读取合约中所有插槽的数据。（对于存储中的状态变量储存结构可以阅读solidity的[官方文档](https://docs.soliditylang.org/zh/latest/internals/layout_in_storage.html)）。
 
-Vault合约中的password存储在插槽1中，所以我们可以插槽0中的数据获取password的值。使用Foundry的cheatcode读取插槽数据
+Vault合约中的password存储在插槽1中，所以我们可以插槽1中的数据获取password的值。使用Foundry的cheatcode读取插槽数据
 
 ```solidity
 bytes32 password = vm.load(vault, bytes32(uint256(1)))
