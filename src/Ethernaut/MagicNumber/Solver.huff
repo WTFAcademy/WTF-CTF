@@ -1,0 +1,20 @@
+/** 
+ *  RETURN 42 ()
+ *
+ *  This huff contract simply returns 42 whenever it is called with/without data and with/without ether
+ */
+
+
+#define macro MAIN() = takes(0) returns(0) {
+    
+    // store 42 in memory at offset 0
+    0x2a    // [2a]
+    0x00    // [0,2a]
+    mstore  // []
+
+    // return 42
+    // return 32 bytes of memory starting at offset 0
+    0x20    // [32]
+    0x00    // [0,32]
+    return  // []
+}
