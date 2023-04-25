@@ -18,6 +18,12 @@ jobs:
           cargo install svm-rs
           svm install 0.4.26
           svm use 0.4.26
+          curl -L get.huff.sh | bash
+          export PATH="$PATH:~/.huff/bin"
+          huffup
       - name: tests
         run: |
-          forge test --ffi -vvv
+          export PATH="$PATH:~/.huff/bin"
+          forge --version
+          huffc --version
+          forge test --ffi -vvvvv
