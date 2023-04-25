@@ -13,7 +13,7 @@ contract MagicNumTest is Test {
 
     function setUp() public {
         factory = new MagicNumFactory();
-        solverHuff = HuffDeployer.config().deploy("Ethernaut/MagicNumber/Solver");
+        solverHuff = HuffDeployer.config().deploy("src/Ethernaut/MagicNumber/Solver.huff");
         solverAssembly = address(new solver());
 
         assertEq(Solver(address(solverAssembly)).whatIsTheMeaningOfLife(), bytes32(uint256(0x2a)));
