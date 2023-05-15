@@ -13,6 +13,9 @@ jobs:
       - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
+      - uses: huff-language/huff-toolchain@v2
+        with:
+          version: nightly
       - name: dependencies
         run: |
           cargo install svm-rs
@@ -20,4 +23,5 @@ jobs:
           svm use 0.4.26
       - name: tests
         run: |
-          forge test --ffi -vvv
+          forge install
+          forge test --ffi -vvvvv
