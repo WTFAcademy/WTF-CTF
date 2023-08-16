@@ -116,6 +116,7 @@ $ forge test -C ./src/Capture_the_Ether/Warmup/Deploy_a_contract -vvv
 - **DoubleEntryPoint**: [代码](./src/Ethernaut/DoubleEntryPoint/DoubleEntryPoint.t.sol) |  [文章](./src/Ethernaut/DoubleEntryPoint/README.md)
 - **Good Samaritan**: [代码](./src/Ethernaut/Good_Samaritan/GoodSamaritan.t.sol) |  [文章](./src/Ethernaut/Good_Samaritan/README.md)
 - **Gatekeeper Three**: [代码](./src/Ethernaut/Gatekeeper_Three/GatekeeperThree.t.sol) |  [文章](./src/Ethernaut/Gatekeeper_Three/README.md)
+- **Switch**: [代码](./src/Ethernaut/Switch/Switch.t.sol) | [文章](./src/Ethernaut/Switch/README.md)
 
 ## 参考
 
