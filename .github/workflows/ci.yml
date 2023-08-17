@@ -21,7 +21,6 @@ jobs:
           wget https://github.com/ethereum/solidity/releases/download/v0.4.24/solc-static-linux
           cp ./solc-static-linux ~/.cargo/bin/solc
           chmod 744 ~/.cargo/bin/solc
-          solc --version
       - name: tests
         run: |
           forge --version
