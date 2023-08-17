@@ -4,12 +4,15 @@
 [submodule "lib/openzeppelin-contracts-05"]
 	path = lib/openzeppelin-contracts-05
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+	branch = release-v2.5.0
 [submodule "lib/openzeppelin-contracts-06"]
 	path = lib/openzeppelin-contracts-06
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+	branch = release-v3.3
 [submodule "lib/openzeppelin-contracts-08"]
 	path = lib/openzeppelin-contracts-08
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+	branch = release-v4.9
 [submodule "lib/foundry-huff"]
 	path = lib/foundry-huff
 	url = https://github.com/huff-language/foundry-huff

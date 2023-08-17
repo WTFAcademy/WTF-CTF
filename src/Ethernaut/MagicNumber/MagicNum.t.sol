@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity 0.8.19;
 
 import "forge-std/Test.sol";
 import {HuffConfig} from "foundry-huff/HuffConfig.sol";
@@ -13,7 +13,8 @@ contract MagicNumTest is Test {
 
     function setUp() public {
         factory = new MagicNumFactory();
-        solverHuff = HuffDeployer.config().deploy("Ethernaut/MagicNumber/Solver");
+
+        solverHuff = HuffDeployer.config().with_evm_version("paris").deploy("Ethernaut/MagicNumber/Solver");
         solverAssembly = address(new solver());
 
         assertEq(Solver(address(solverAssembly)).whatIsTheMeaningOfLife(), bytes32(uint256(0x2a)));
