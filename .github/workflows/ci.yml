@@ -18,10 +18,11 @@ jobs:
           version: nightly
       - name: dependencies
         run: |
-          cargo install svm-rs
-          svm install 0.4.26
-          svm use 0.4.26
+          wget https://github.com/ethereum/solidity/releases/download/v0.4.24/solc-static-linux
+          cp ./solc-static-linux ~/.cargo/bin/solc
+          chmod 744 ~/.cargo/bin/solc
       - name: tests
         run: |
+          forge --version
           forge install
           forge test --ffi -vvvvv
