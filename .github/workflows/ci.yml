@@ -24,7 +24,5 @@ jobs:
       - name: tests
         run: |
           forge --version
-          foundryup
-          forge --version
           forge install
           forge test --ffi -vvvvv
